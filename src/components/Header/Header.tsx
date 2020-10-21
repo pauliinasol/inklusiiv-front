@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Nav } from "../Nav/Nav";
-import { SmallText } from "../../assets/Typography";
+import { SmallTextHeader } from "../../assets/Typography";
 
 const HeaderStyled = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ const HeaderStyled = styled.div`
 export const Header = () => {
   return (
     <HeaderStyled>
-      <SmallText>Inklusiiv Story Board</SmallText>
+      <SmallTextHeader>Inklusiiv Story Board</SmallTextHeader>
       <Nav />
     </HeaderStyled>
   );
