@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
-import { Header } from "./components/Header/Header";
-import { Board } from "./components/Board/Board";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import AOS from "aos";
+import Container from "./RouteContainer";
+
+import { BrowserRouter as Router } from "react-router-dom";
 
 const App = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <Router>
-      <Header />
-      {/* <Route exact path="/" component={HeaderFirst} /> */}
-      <Route path="/board" component={Board} />
+      <Container />
     </Router>
   );
 };

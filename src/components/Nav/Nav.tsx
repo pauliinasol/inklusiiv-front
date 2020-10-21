@@ -21,12 +21,14 @@ const NavStyled = styled.div`
 export const Nav = () => {
   return (
     <NavStyled>
-      <Button>
-        <Link to="/">Main</Link>
-      </Button>
-      <Button>
-        <Link to="/board">Board</Link>
-      </Button>
+      <Link to="/">
+        <Button>Main</Button>
+      </Link>
+
+      <Link to="/board">
+        <Button>Board</Button>
+      </Link>
+
       <Button>Add your story</Button>
     </NavStyled>
   );

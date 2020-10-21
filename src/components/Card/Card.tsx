@@ -17,8 +17,17 @@ const CardStyled = styled.div`
   }
 `;
 
-const Paragraph = styled.div`
-  padding: 2em;
+const Paragraph = styled.div``;
+
+const ContentStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 1.25em;
+  > * {
+    :first-child {
+      margin-bottom: 0.75em;
+    }
+  }
 `;
 
 interface ICardProps {
@@ -27,9 +36,12 @@ interface ICardProps {
 
 export const Card: FC<ICardProps> = ({ content }) => {
   return (
-    <CardStyled>
+    <CardStyled data-aos="zoom-in">
       <img src={inklusiivBackground} alt={"Inklusiiv"}></img>
-      <Paragraph>{content}</Paragraph>
+      <ContentStyled>
+        <div>Name: Pauliina</div>
+        <Paragraph>{content}</Paragraph>
+      </ContentStyled>
     </CardStyled>
   );
 };

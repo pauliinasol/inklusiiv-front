@@ -7,6 +7,7 @@ const BoardStyled = styled.div`
   margin-left: 4em;
   margin-right: 4em;
   display: flex;
+  background-color: #f2efe3;
 `;
 
 const BoardItemsStyled = styled.div`
