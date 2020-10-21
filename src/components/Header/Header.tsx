@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Nav } from "./Nav";
+import { Nav } from "../Nav/Nav";
+import { SmallText } from "../../assets/Typography";
 
 const HeaderStyled = styled.div`
   display: flex;
@@ -13,11 +14,6 @@ const HeaderStyled = styled.div`
   justify-content: space-between;
   padding-left: 3em;
   padding-right: 3em;
-`;
-
-const SmallText = styled.div`
-  color: black;
-  font-size: 1.25em;
 `;
 
 export const Header = () => {

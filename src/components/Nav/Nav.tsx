@@ -1,10 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "./Button";
+import { Button } from "../Button/Button";
+import { Link } from "react-router-dom";
 
 const NavStyled = styled.div`
   display: flex;
   flex-direction: row;
+  a {
+    color: black;
+    text-decoration: none;
+  }
   > * {
     margin-left: 1.5em;
     :first-child {
@@ -16,8 +21,12 @@ const NavStyled = styled.div`
 export const Nav = () => {
   return (
     <NavStyled>
-      <Button>Main</Button>
-      <Button>Board</Button>
+      <Button>
+        <Link to="/">Main</Link>
+      </Button>
+      <Button>
+        <Link to="/board">Board</Link>
+      </Button>
       <Button>Add your story</Button>
     </NavStyled>
   );
