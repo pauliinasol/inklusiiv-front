@@ -1,11 +1,11 @@
-import React, { FC } from "react";
+import React from "react";
 import styled from "styled-components";
 import { HeaderOne, SmallText, Text } from "../../assets/Typography";
 
 import inklusiiv from "./inklusiiv.png";
 
 const breakPointMaxMedium = "(max-width: 768px)";
-const breakPointMaxLarge = "(max-width: 968px)";
+// const breakPointMaxLarge = "(max-width: 968px)";
 
 const Container = styled.section`
   background: #f2efe3;

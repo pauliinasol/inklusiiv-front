@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { useForm } from "react-hook-form";
-import { Button } from "../Button/Button";
+// import { useForm } from "react-hook-form";
+// import { Button } from "../Button/Button";
 
 const Container = styled.div`
   display: flex;
@@ -11,10 +11,10 @@ const Container = styled.div`
 `;
 
 export const AddStory = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = (data: { [x: string]: any }) => console.log(data);
+  // const { register, handleSubmit, watch, errors } = useForm();
+  // const onSubmit = (data: { [x: string]: any }) => console.log(data);
 
-  console.log(watch("example")); // watch input value by passing the name of it
+  // console.log(watch("example")); // watch input value by passing the name of it
 
   return (
     <Container>
