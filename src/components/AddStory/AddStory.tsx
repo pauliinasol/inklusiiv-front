@@ -16,6 +16,8 @@ const FormContainer = styled.div`
 `;
 
 const FormStyled = styled.form`
+  display: flex;
+  flex-direction: column;
   input {
     font-family: "Karla", sans-serif;
     width: 40em;
@@ -34,15 +36,24 @@ const FormStyled = styled.form`
     border-radius: 0.5em;
     font-family: "Karla", sans-serif;
   }
-  button {
-    width: 4em;
-  }
 `;
 
-const ButtonForm = styled(Button)`
-  width: 10%;
+const ButtonForm = styled.button`
+  align-self: center;
+  font-family: "Karla", sans-serif;
+  font-size: 1em;
+  background-color: #f1c9b7;
+  border-radius: 1.5em;
+  padding: 0.65em;
+  transition: 0.3s;
+  border: none;
+  width: 5em;
   :focus {
     outline: none;
+  }
+  :hover {
+    background-color: #f2b12e;
+    cursor: pointer;
   }
 `;
 export const AddStory = () => {
@@ -78,7 +89,7 @@ export const AddStory = () => {
                   )}
                 </Field>
 
-                <ButtonForm type="submit">Submit</ButtonForm>
+                <ButtonForm type={"submit"}>Submit</ButtonForm>
               </FormStyled>
             </form>
           )}
