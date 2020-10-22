@@ -18,12 +18,14 @@ const FormContainer = styled.div`
 const FormStyled = styled.form`
   display: flex;
   flex-direction: column;
+
   input {
     font-family: "Karla", sans-serif;
     width: 40em;
     border: 1px solid #fff;
     height: 2.5em;
-    margin: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     outline: none;
     border-radius: 0.5em;
   }
@@ -31,7 +33,8 @@ const FormStyled = styled.form`
   textarea {
     width: 40em;
     border: 1px solid #fff;
-    margin: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     outline: none;
     border-radius: 0.5em;
     font-family: "Karla", sans-serif;
@@ -57,7 +60,7 @@ const ButtonForm = styled.button`
   }
 `;
 export const AddStory = () => {
-  const onSubmit = () => console.log("hello");
+  const onSubmit = (e: EventTarget) => console.log(e);
   return (
     <Container>
       <FormContainer>
@@ -70,12 +73,12 @@ export const AddStory = () => {
                 <HeaderTwo>Add your story</HeaderTwo>
                 <SmallText>Nickname</SmallText>
                 <Field
-                  name="firstName"
+                  name="name"
                   component="input"
                   placeholder="You can also leave this anonymous"
                 />
 
-                <Field name="phone">
+                <Field name="story">
                   {({ input, meta }) => (
                     <>
                       <SmallText>Your story</SmallText>
