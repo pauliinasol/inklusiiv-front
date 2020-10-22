@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import AOS from "aos";
-import RouterContainer from "./RouteContainer";
+import RouterContainer from "./components/RouteContainer/RouteContainer";
 
 import { BrowserRouter as Router } from "react-router-dom";
 

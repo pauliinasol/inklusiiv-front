@@ -1,9 +1,8 @@
 import React, { FC } from "react";
-import "./App.css";
-import { Header } from "./components/Header/Header";
-import { Board } from "./components/Board/Board";
-import { Main } from "./components/Main/Main";
-import { AddStory } from "./components/AddStory/AddStory";
+import { Header } from "../Header/Header";
+import { Board } from "../Board/Board";
+import { Main } from "../Main/Main";
+import { AddStory } from "../AddStory/AddStory";
 import styled from "styled-components";
 import {
   Route,
