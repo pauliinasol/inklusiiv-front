@@ -21,10 +21,10 @@ const NavStyled = styled.div`
 export const Nav = () => {
   return (
     <NavStyled>
-      <Link to="/">
+      {/* <Link to="/">
         <Button>Home</Button>
       </Link>
-
+ */}
       <Link to="/board">
         <Button>Board</Button>
       </Link>

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Nav } from "../Nav/Nav";
 import { SmallTextHeader } from "../../assets/Typography";
+import { Link } from "react-router-dom";
 
 const HeaderStyled = styled.div`
   display: flex;
@@ -14,12 +15,17 @@ const HeaderStyled = styled.div`
   justify-content: space-between;
   padding-left: 3em;
   padding-right: 3em;
+  * {
+    text-decoration: none;
+  }
 `;
 
 export const Header = () => {
   return (
     <HeaderStyled>
-      <SmallTextHeader>Inklusiiv Story Board</SmallTextHeader>
+      <Link to="/">
+        <SmallTextHeader>Inklusiiv Story Board</SmallTextHeader>
+      </Link>
       <Nav />
     </HeaderStyled>
   );

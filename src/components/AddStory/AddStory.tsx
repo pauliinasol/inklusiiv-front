@@ -2,7 +2,6 @@ import React from "react";
 import { Field, Form } from "react-final-form";
 import styled from "styled-components";
 import { HeaderTwo, SmallText } from "../../assets/Typography";
-import { Button } from "../Button/Button";
 
 const Container = styled.div`
   position: absolute;
