@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import AOS from "aos";
-import Container from "./RouteContainer";
+import RouterContainer from "./RouteContainer";
 
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -11,7 +11,7 @@ const App = () => {
   }, []);
   return (
     <Router>
-      <Container />
+      <RouterContainer />
     </Router>
   );
 };

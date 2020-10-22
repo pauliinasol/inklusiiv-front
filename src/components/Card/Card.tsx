@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+import { SmallText } from "../../assets/Typography";
 import inklusiivBackground from "./inklusiivbcg.png";
 
 const CardStyled = styled.div`
@@ -30,6 +31,17 @@ const ContentStyled = styled.div`
   }
 `;
 
+const NameStyled = styled(SmallText)`
+  display: flex;
+  flex-direction: row;
+  > * {
+    :first-child {
+      font-weight: 700;
+      margin-right: 0.25em;
+    }
+  }
+`;
+
 interface ICardProps {
   content: string;
 }
@@ -39,7 +51,9 @@ export const Card: FC<ICardProps> = ({ content }) => {
     <CardStyled data-aos="zoom-in">
       <img src={inklusiivBackground} alt={"Inklusiiv"}></img>
       <ContentStyled>
-        <div>Name: Pauliina</div>
+        <NameStyled>
+          <div>From:</div> <div>Emily</div>
+        </NameStyled>
         <Paragraph>{content}</Paragraph>
       </ContentStyled>
     </CardStyled>

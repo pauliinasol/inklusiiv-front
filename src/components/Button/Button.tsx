@@ -14,6 +14,7 @@ const ButtonStyled = styled.div`
 
 interface IButtonProps {
   children: React.ReactNode;
+  type?: string;
 }
 
 export const Button: FC<IButtonProps> = ({ children }) => {

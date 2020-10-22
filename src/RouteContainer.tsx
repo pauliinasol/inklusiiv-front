@@ -3,6 +3,7 @@ import "./App.css";
 import { Header } from "./components/Header/Header";
 import { Board } from "./components/Board/Board";
 import { Main } from "./components/Main/Main";
+import { AddStory } from "./components/AddStory/AddStory";
 import styled from "styled-components";
 import {
   Route,
@@ -39,19 +40,20 @@ const Wrapper = styled.div`
   }
 `;
 
-export const Container: FC<RouteComponentProps> = ({ location }) => {
+export const RouterContainer: FC<RouteComponentProps> = ({ location }) => {
   return (
     <Wrapper>
       <Header />
       <TransitionGroup>
         <CSSTransition
           key={location.key}
-          timeout={{ enter: 3000, exit: 3000 }}
+          timeout={{ enter: 300, exit: 300 }}
           classNames={"fade"}
         >
           <Switch>
             <Route exact path="/" component={Main} />
             <Route path="/board" component={Board} />
+            <Route path="/add" component={AddStory} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>
@@ -59,4 +61,4 @@ export const Container: FC<RouteComponentProps> = ({ location }) => {
   );
 };
 
-export default withRouter(Container);
+export default withRouter(RouterContainer);

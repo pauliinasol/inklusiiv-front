@@ -29,7 +29,10 @@ export const Nav = () => {
         <Button>Board</Button>
       </Link>
 
-      <Button>Add your story</Button>
+      <Link to="/add">
+        <Button>Add your story</Button>
+      </Link>
+      <Button>Log in</Button>
     </NavStyled>
   );
 };

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-import { HeaderOne, SmallText } from "../../assets/Typography";
+import { HeaderOne, SmallText, Text } from "../../assets/Typography";
 
 import inklusiiv from "./inklusiiv.png";
 
@@ -26,7 +26,8 @@ const InnerContainer = styled.div`
   @media ${breakPointMaxMedium} {
     text-align: center;
     align-items: center;
-    width: 100%;
+    justify-content: center;
+    width: 80%;
     padding: 8em 2em;
   }
 `;
@@ -45,6 +46,12 @@ const Image = styled.div`
 const Footer = styled.div`
   background-color: #fafafa;
   height: 15em;
+  text-align: center;
+  > * {
+    padding-left: 15em;
+    padding-right: 15em;
+    padding-top: 4em;
+  }
 `;
 
 export const Main = () => (
@@ -52,19 +59,24 @@ export const Main = () => (
     <Container>
       <InnerContainer>
         <HeaderOne>Hello world</HeaderOne>
-        <SmallText>
+        <Text>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.{" "}
-        </SmallText>
+          scrambled it to make a type specimen book.
+        </Text>
       </InnerContainer>
       <Image>
         <img src={inklusiiv} alt={"Inklusiiv"} />
       </Image>
     </Container>
-    <Footer />
+    <Footer>
+      <SmallText>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book.
+      </SmallText>
+    </Footer>
   </>
 );
