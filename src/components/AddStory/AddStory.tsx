@@ -1,36 +1,89 @@
 import React from "react";
+import { Field, Form } from "react-final-form";
 import styled from "styled-components";
-// import { useForm } from "react-hook-form";
-// import { Button } from "../Button/Button";
+import { HeaderTwo, SmallText } from "../../assets/Typography";
+import { Button } from "../Button/Button";
 
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-  /* justify-content: center; */
-  flex-direction: column;
+  position: absolute;
+  width: 100%;
 `;
 
+const FormContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const FormStyled = styled.form`
+  input {
+    font-family: "Karla", sans-serif;
+    width: 40em;
+    border: 1px solid #fff;
+    height: 2.5em;
+    margin: 1em;
+    outline: none;
+    border-radius: 0.5em;
+  }
+
+  textarea {
+    width: 40em;
+    border: 1px solid #fff;
+    margin: 1em;
+    outline: none;
+    border-radius: 0.5em;
+    font-family: "Karla", sans-serif;
+  }
+  button {
+    width: 4em;
+  }
+`;
+
+const ButtonForm = styled(Button)`
+  width: 10%;
+  :focus {
+    outline: none;
+  }
+`;
 export const AddStory = () => {
-  // const { register, handleSubmit, watch, errors } = useForm();
-  // const onSubmit = (data: { [x: string]: any }) => console.log(data);
-
-  // console.log(watch("example")); // watch input value by passing the name of it
-
+  const onSubmit = () => console.log("hello");
   return (
     <Container>
-      {/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}
-      {/* <form onSubmit={handleSubmit(onSubmit)}> */}
-      {/* register your input into the hook by invoking the "register" function */}
-      {/* <input name="example" defaultValue="test" ref={register} />
-        <input name="example" defaultValue="test" ref={register} /> */}
+      <FormContainer>
+        <Form
+          onSubmit={onSubmit}
+          // validate={validate}
+          render={({ handleSubmit }) => (
+            <form onSubmit={handleSubmit}>
+              <FormStyled>
+                <HeaderTwo>Add your story</HeaderTwo>
+                <SmallText>Nickname</SmallText>
+                <Field
+                  name="firstName"
+                  component="input"
+                  placeholder="You can also leave this anonymous"
+                />
 
-      {/* include validation with required or other standard HTML validation rules */}
-      {/* <input name="exampleRequired" ref={register({ required: true })} /> */}
-      {/* errors will return when field validation fails  */}
-      {/* {errors.exampleRequired && <span>This field is required</span>} */}
+                <Field name="phone">
+                  {({ input, meta }) => (
+                    <>
+                      <SmallText>Your story</SmallText>
+                      <textarea
+                        rows={20}
+                        {...input}
+                        placeholder="Share your story"
+                      />
+                      {meta.touched && meta.error && <span>{meta.error}</span>}
+                    </>
+                  )}
+                </Field>
 
-      {/* <Button type="submit">Submit</Button> */}
-      {/* </form> */}
+                <ButtonForm type="submit">Submit</ButtonForm>
+              </FormStyled>
+            </form>
+          )}
+        />
+      </FormContainer>
     </Container>
   );
 };

@@ -16,6 +16,12 @@ export const HeaderOne = styled.div`
   line-height: 3;
 `;
 
+export const HeaderTwo = styled.div`
+  color: black;
+  font-size: 2em;
+  line-height: 3;
+`;
+
 export const SmallTextHeader = styled.div`
   color: black;
   font-size: 1.25em;
