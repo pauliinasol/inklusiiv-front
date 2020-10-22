@@ -22,7 +22,7 @@ export const Nav = () => {
   return (
     <NavStyled>
       <Link to="/">
-        <Button>Main</Button>
+        <Button>Home</Button>
       </Link>
 
       <Link to="/board">
