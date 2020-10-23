@@ -27,6 +27,7 @@ const FormStyled = styled.form`
     margin-bottom: 1em;
     outline: none;
     border-radius: 0.5em;
+    font-size: 1em;
   }
 
   textarea {
@@ -37,6 +38,7 @@ const FormStyled = styled.form`
     outline: none;
     border-radius: 0.5em;
     font-family: "Karla", sans-serif;
+    font-size: 1em;
   }
 `;
 
