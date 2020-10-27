@@ -28,12 +28,13 @@ interface ICardData {
   story: string;
 }
 export const Board = () => {
-  const [data, setData] = useState<ICardData[]>();
+  const [data, setData] = useState<ICardData[]>([]);
   const [error, setErrors] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
       const data = await fetch("https://inklusiiv-api.herokuapp.com/api/cards");
+
       data
         .json()
         .then((data) => setData(data))
@@ -43,24 +44,16 @@ export const Board = () => {
     fetchData();
   }, []);
 
-  console.log("data", data);
-
-  // const cardData: ICardData[] = pathOr(null, ["cards"], data);
-
-  if (!data && data) {
+  if (!data || data.length === 0) {
     return null;
   }
-
-  const cardData: ICardData[] | undefined = data?.map((d) => d);
-
-  console.log("cardData", cardData);
 
   return (
     <BoardStyled>
       <BoardItemsStyled>
-        {cardData &&
-          cardData.map((data, i) => (
-            <Card key={i} name={data.name} story={data.story} />
+        {data &&
+          data.map((card, i) => (
+            <Card key={i} name={card.name} story={card.story} />
           ))}
       </BoardItemsStyled>
     </BoardStyled>
