@@ -51,10 +51,9 @@ export const Board = () => {
   return (
     <BoardStyled>
       <BoardItemsStyled>
-        {data &&
-          data.map((card, i) => (
-            <Card key={i} name={card.name} story={card.story} />
-          ))}
+        {data.map((card, i) => (
+          <Card key={i} name={card.name} story={card.story} />
+        ))}
       </BoardItemsStyled>
     </BoardStyled>
   );
