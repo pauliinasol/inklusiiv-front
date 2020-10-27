@@ -43,18 +43,19 @@ const NameStyled = styled(SmallText)`
 `;
 
 interface ICardProps {
-  content: string;
+  name: string;
+  story: string;
 }
 
-export const Card: FC<ICardProps> = ({ content }) => {
+export const Card: FC<ICardProps> = ({ name, story }) => {
   return (
     <CardStyled data-aos="zoom-in">
       <img src={inklusiivBackground} alt={"Inklusiiv"}></img>
       <ContentStyled>
         <NameStyled>
-          <div>From:</div> <div>Emily</div>
+          <div>From</div> <div>{name}</div>
         </NameStyled>
-        <Paragraph>{content}</Paragraph>
+        <Paragraph>{story}</Paragraph>
       </ContentStyled>
     </CardStyled>
   );
