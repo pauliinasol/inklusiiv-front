@@ -15,6 +15,7 @@
     "@types/react-transition-group": "^4.4.0",
     "@types/styled-components": "^5.1.4",
     "aos": "^2.3.4",
+    "axios": "^0.21.0",
     "cra-template": "1.0.3",
     "final-form": "^4.20.1",
     "ramda": "^0.27.1",

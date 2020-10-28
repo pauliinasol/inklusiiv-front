@@ -2,6 +2,7 @@ import React from "react";
 import { Field, Form } from "react-final-form";
 import styled from "styled-components";
 import { HeaderTwo, SmallText } from "../../assets/Typography";
+import axios from "axios";
 
 const Container = styled.div`
   position: absolute;
@@ -61,12 +62,27 @@ const ButtonForm = styled.button`
   }
 `;
 export const AddStory = () => {
-  const onSubmit = (e: EventTarget) => console.log(e);
+  // const onSubmit = (e: EventTarget) => console.log(e);
+
+  const add = async (values: EventTarget) =>
+    await axios({
+      method: "post",
+      url: "https://inklusiiv-api.herokuapp.com/api/cards",
+      data: values,
+      // config: { headers: {'Content-Type': 'multipart/form-data' }}
+    })
+      .then(function (response) {
+        console.log("This was successful");
+      })
+      .catch(function (response) {
+        return "Form was not sent";
+      });
+
   return (
     <Container>
       <FormContainer>
         <Form
-          onSubmit={onSubmit}
+          onSubmit={add}
           // validate={validate}
           render={({ handleSubmit }) => (
             <form onSubmit={handleSubmit}>
